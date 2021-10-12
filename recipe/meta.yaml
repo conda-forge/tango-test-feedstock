@@ -10,7 +10,7 @@ source:
   sha256: "a34508b7ca862c3c07d2b4dafbaeb39cca7e33f8890195f3dfdc8d397a6da18b"
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not linux]
 
 requirements:
@@ -23,9 +23,7 @@ requirements:
   host:
     - cppzmq
     - cpptango
-  run:
-    # cpptango set in run_exports
-    - {{ pin_compatible('omniorb', max_pin='x.x') }}
+    - omniorb
 
 test:
   commands:
