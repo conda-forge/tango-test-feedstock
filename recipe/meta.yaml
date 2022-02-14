@@ -1,5 +1,5 @@
 {% set name = "tango-test" %}
-{% set version = "3.3" %}
+{% set version = "3.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://gitlab.com/tango-controls/TangoTest/-/archive/{{ version }}/TangoTest-{{ version }}.tar.gz
-  sha256: "a34508b7ca862c3c07d2b4dafbaeb39cca7e33f8890195f3dfdc8d397a6da18b"
+  sha256: f335e9e3d672c2bc160f3d927eade46a37ba51650b8e5501cb12d15b9edd433a
 
 build:
-  number: 1
+  number: 0
   skip: true  # [not linux]
 
 requirements:
@@ -34,11 +34,11 @@ about:
   home: https://www.tango-controls.org
   license: GPL-3.0-or-later
   license_file: LICENSE
-  summary: 'TangoTest device server'
+  summary: TangoTest device server
   description: |
-   This is the Tango-Controls TangoTest device server.
-   A famous TANGO device server developed for testing.
-   Tango-Controls is a software toolkit for building control systems.
+    This is the Tango-Controls TangoTest device server.
+    A famous TANGO device server developed for testing.
+    Tango-Controls is a software toolkit for building control systems.
   dev_url: https://gitlab.com/tango-controls/TangoTest
   doc_url: https://tango-controls.readthedocs.io/en/latest/tutorials-and-howtos/how-tos/how-to-try-tango.html#play-with-tango-controls
   doc_source_url: https://gitlab.com/tango-controls/TangoTest/tree/main/doc_html
