@@ -10,16 +10,16 @@ source:
   sha256: f335e9e3d672c2bc160f3d927eade46a37ba51650b8e5501cb12d15b9edd433a
 
 build:
-  number: 0
-  skip: true  # [not linux]
+  number: 1
+  skip: true  # [osx]
 
 requirements:
   build:
     - cmake
-    - make
+    - make                    # [unix]
     - {{ compiler('cxx') }}
-    - libtool
-    - pkg-config
+    - libtool                 # [unix]
+    - pkg-config              # [unix]
   host:
     - cppzmq
     - cpptango
@@ -28,7 +28,8 @@ requirements:
 test:
   commands:
     # TangoTest --help returns 255, so grep the stderr for test
-    - TangoTest --help 2>&1 | grep usage
+    - TangoTest --help 2>&1 | grep usage         # [unix]
+    - TangoTest.exe --help 2>&1 | findstr usage  # [win]
 
 about:
   home: https://www.tango-controls.org
