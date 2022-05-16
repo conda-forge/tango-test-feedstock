@@ -8,9 +8,11 @@ package:
 source:
   url: https://gitlab.com/tango-controls/TangoTest/-/archive/{{ version }}/TangoTest-{{ version }}.tar.gz
   sha256: f335e9e3d672c2bc160f3d927eade46a37ba51650b8e5501cb12d15b9edd433a
+  patches:
+    - tango-include-dirs.patch  # [win]
 
 build:
-  number: 1
+  number: 2
   skip: true  # [osx]
 
 requirements:
