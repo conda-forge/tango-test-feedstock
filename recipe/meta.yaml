@@ -1,5 +1,5 @@
 {% set name = "tango-test" %}
-{% set version = "3.4" %}
+{% set version = "3.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://gitlab.com/tango-controls/TangoTest/-/archive/{{ version }}/TangoTest-{{ version }}.tar.gz
-  sha256: f335e9e3d672c2bc160f3d927eade46a37ba51650b8e5501cb12d15b9edd433a
+  sha256: 0d609d5fca6a98b1621179ff30f2a52831d25a48ffcb10f3b6a30c71b1192a2b
   patches:
     - tango-include-dirs.patch  # [win]
 
 build:
-  number: 2
+  number: 0
   skip: true  # [osx]
 
 requirements:
