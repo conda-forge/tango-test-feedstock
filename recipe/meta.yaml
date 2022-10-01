@@ -10,8 +10,7 @@ source:
   sha256: 6bbaab43eed6c3d775931721b1fe84a70cd3d21661069ef767c25ac7f378f812
 
 build:
-  number: 0
-  skip: true  # [osx]
+  number: 1
 
 requirements:
   build:
@@ -24,6 +23,7 @@ requirements:
     - cppzmq
     - cpptango
     - omniorb
+    - omniorb-libs
 
 test:
   commands:
