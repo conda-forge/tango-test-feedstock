@@ -1,5 +1,5 @@
 {% set name = "tango-test" %}
-{% set version = "3.7" %}
+{% set version = "3.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.com/tango-controls/TangoTest/-/archive/{{ version }}/TangoTest-{{ version }}.tar.gz
-  sha256: 4c3eabf9922ffcfd3aa2f4962881f9d4c6d6164345163d0e3c6169cd8894a6d0
+  sha256: 4111fe1499def4746b9d6d1830f2fbc9a21b785f80ba0b957795077fb68d02d1
   patches:
     - find-zeromq-win.patch  # [win]
 
