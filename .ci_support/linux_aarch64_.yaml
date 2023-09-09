@@ -5,11 +5,11 @@ cdt_arch:
 cdt_name:
 - cos7
 channel_sources:
-- conda-forge
+- conda-forge/label/cpptango_rc,conda-forge
 channel_targets:
-- conda-forge main
+- conda-forge tango-test_rc
 cpptango:
-- '9.4'
+- '9.5'
 cxx_compiler:
 - gxx
 cxx_compiler_version:
