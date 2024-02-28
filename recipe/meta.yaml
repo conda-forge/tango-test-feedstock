@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://gitlab.com/tango-controls/TangoTest/-/archive/{{ version }}/TangoTest-{{ version }}.tar.gz
-  sha256: 3c157910ed8a9ca3a771e158b5345088f725d18b527e592e43ac7a93e7ae1568
+  url: https://gitlab.com/tango-controls/TangoTest/-/releases/{{ version }}/downloads/TangoTest-with-submodules-{{ version }}.tar.gz
+  sha256: 71e5f6273212053748901ed1c7174db394e15a18301aef7de68d54f90cc979b9
   patches:
     - find-zeromq-win.patch  # [win]
 
