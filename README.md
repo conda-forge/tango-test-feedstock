@@ -95,14 +95,14 @@ Current release info
 Installing tango-test
 =====================
 
-Installing `tango-test` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `tango-test` from the `conda-forge/label/tango-test_rc` channel can be achieved by adding `conda-forge/label/tango-test_rc` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/tango-test_rc
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `tango-test` can be installed with `conda`:
+Once the `conda-forge/label/tango-test_rc` channel has been enabled, `tango-test` can be installed with `conda`:
 
 ```
 conda install tango-test
@@ -117,26 +117,26 @@ mamba install tango-test
 It is possible to list all of the versions of `tango-test` available on your platform with `conda`:
 
 ```
-conda search tango-test --channel conda-forge
+conda search tango-test --channel conda-forge/label/tango-test_rc
 ```
 
 or with `mamba`:
 
 ```
-mamba search tango-test --channel conda-forge
+mamba search tango-test --channel conda-forge/label/tango-test_rc
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search tango-test --channel conda-forge
+mamba repoquery search tango-test --channel conda-forge/label/tango-test_rc
 
 # List packages depending on `tango-test`:
-mamba repoquery whoneeds tango-test --channel conda-forge
+mamba repoquery whoneeds tango-test --channel conda-forge/label/tango-test_rc
 
 # List dependencies of `tango-test`:
-mamba repoquery depends tango-test --channel conda-forge
+mamba repoquery depends tango-test --channel conda-forge/label/tango-test_rc
 ```
 
 
@@ -158,7 +158,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance

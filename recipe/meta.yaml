@@ -1,15 +1,15 @@
 {% set name = "tango-test" %}
-{% set version = "3.8" %}
+{% set version = "3.9" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://gitlab.com/tango-controls/TangoTest/-/archive/{{ version }}/TangoTest-{{ version }}.tar.gz
-  sha256: 4111fe1499def4746b9d6d1830f2fbc9a21b785f80ba0b957795077fb68d02d1
+  url: https://gitlab.com/tango-controls/TangoTest/-/releases/{{ version }}/downloads/TangoTest-with-submodules-{{ version }}.tar.gz
+  sha256: 71e5f6273212053748901ed1c7174db394e15a18301aef7de68d54f90cc979b9
   patches:
-    - find-zeromq-win.patch  # [win]
+    - find-zeromq.patch  # [win]
 
 build:
   number: 1
@@ -18,13 +18,13 @@ requirements:
   build:
     - cmake
     - make                    # [unix]
+    - {{ stdlib('c') }}
     - {{ compiler('cxx') }}
     - libtool                 # [unix]
     - pkg-config              # [unix]
   host:
     - cppzmq
     - cpptango
-    - omniorb
     - omniorb-libs
 
 test:
