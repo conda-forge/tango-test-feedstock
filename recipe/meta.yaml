@@ -1,5 +1,5 @@
 {% set name = "tango-test" %}
-{% set version = "3.9" %}
+{% set version = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,9 +7,7 @@ package:
 
 source:
   url: https://gitlab.com/tango-controls/TangoTest/-/releases/{{ version }}/downloads/TangoTest-with-submodules-{{ version }}.tar.gz
-  sha256: 71e5f6273212053748901ed1c7174db394e15a18301aef7de68d54f90cc979b9
-  patches:
-    - find-zeromq.patch  # [win]
+  sha256: ef563bbd2299e3c1c19e6072bda5c1dafd551936ba3af7559fb5cf80d349b6cd
 
 build:
   number: 0
@@ -18,8 +16,8 @@ requirements:
   build:
     - cmake
     - make                    # [unix]
+    - {{ stdlib('c') }}
     - {{ compiler('cxx') }}
-    - libtool                 # [unix]
     - pkg-config              # [unix]
   host:
     - cppzmq
