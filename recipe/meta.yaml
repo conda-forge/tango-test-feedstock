@@ -1,5 +1,5 @@
 {% set name = "tango-test" %}
-{% set version = "3.10" %}
+{% set version = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.com/tango-controls/TangoTest/-/releases/{{ version }}/downloads/TangoTest-with-submodules-{{ version }}.tar.gz
-  sha256: ef563bbd2299e3c1c19e6072bda5c1dafd551936ba3af7559fb5cf80d349b6cd
+  sha256: 793d5340a5fe0f9954296eff96afe0a15191d1c1a3895ba3c535cf26984f1677
 
 build:
   number: 0
