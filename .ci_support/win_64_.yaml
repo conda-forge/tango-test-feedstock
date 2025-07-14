@@ -5,8 +5,8 @@ channel_sources:
 channel_targets:
 - conda-forge tango-test_rc
 cpptango:
-- '10.0'
+- '10.1'
 cxx_compiler:
-- vs2019
+- vs2022
 target_platform:
 - win-64
