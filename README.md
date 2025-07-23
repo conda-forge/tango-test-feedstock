@@ -3,7 +3,7 @@ About tango-test-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tango-test-feedstock/blob/main/LICENSE.txt)
 
-Home: https://www.tango-controls.org
+Home: https://www.tango-controls.org/
 
 Package license: GPL-3.0-or-later
 
@@ -16,7 +16,6 @@ Documentation: https://tango-controls.readthedocs.io/en/latest/tutorials-and-how
 This is the Tango-Controls TangoTest device server.
 A famous TANGO device server developed for testing.
 Tango-Controls is a software toolkit for building control systems.
-
 
 Current build status
 ====================

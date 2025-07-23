@@ -1,0 +1,54 @@
+schema_version: 1
+
+context:
+  name: tango-test
+  version: 3.11
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://gitlab.com/tango-controls/TangoTest/-/releases/${{ version }}/downloads/TangoTest-with-submodules-${{ version }}.tar.gz
+  sha256: 793d5340a5fe0f9954296eff96afe0a15191d1c1a3895ba3c535cf26984f1677
+
+build:
+  number: 2
+
+requirements:
+  build:
+    - cmake
+    - ${{ stdlib('c') }}
+    - ${{ compiler('cxx') }}
+    - if: unix
+      then:
+        - make
+        - pkg-config
+  host:
+    - cppzmq
+    - cpptango
+    - omniorb-libs
+
+tests:
+  - script:
+      - if: unix
+        then: TangoTest --help 2>&1 | grep -i usage
+      - if: win
+        then: TangoTest.exe --help 2>&1 | findstr /i usage
+
+about:
+  summary: TangoTest device server
+  description: |
+    This is the Tango-Controls TangoTest device server.
+    A famous TANGO device server developed for testing.
+    Tango-Controls is a software toolkit for building control systems.
+  license: GPL-3.0-or-later
+  license_file: LICENSE
+  homepage: https://www.tango-controls.org
+  repository: https://gitlab.com/tango-controls/TangoTest
+  documentation: https://tango-controls.readthedocs.io/
+
+extra:
+  recipe-maintainers:
+    - beenje
+    - bourtemb
