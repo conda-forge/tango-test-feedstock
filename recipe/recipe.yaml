@@ -13,7 +13,7 @@ source:
   sha256: 793d5340a5fe0f9954296eff96afe0a15191d1c1a3895ba3c535cf26984f1677
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
@@ -31,10 +31,9 @@ requirements:
 
 tests:
   - script:
-      - if: unix
-        then: TangoTest --help 2>&1 | grep -i usage
       - if: win
         then: TangoTest.exe --help 2>&1 | findstr /i usage
+        else: TangoTest --help 2>&1 | grep -i usage
 
 about:
   summary: TangoTest device server
