@@ -1,4 +1,4 @@
-# Build packages both for supported cpptango versions
+# Build packages for supported cpptango versions
 # (osx only supported from 9.4)
 cpptango:
   - 9.3    # [linux]
@@ -6,3 +6,4 @@ cpptango:
   - 9.5
   - 10.0
   - 10.1
+  - 10.3
