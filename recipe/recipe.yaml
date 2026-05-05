@@ -18,11 +18,11 @@ build:
 requirements:
   build:
     - cmake
+    - ninja
     - ${{ stdlib('c') }}
     - ${{ compiler('cxx') }}
     - if: unix
       then:
-        - make
         - pkg-config
   host:
     - cppzmq
