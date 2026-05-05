@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: tango-test
-  version: "3.13"
+  version: "3.14"
 
 package:
   name: ${{ name|lower }}
@@ -10,19 +10,19 @@ package:
 
 source:
   url: https://gitlab.com/tango-controls/TangoTest/-/releases/${{ version }}/downloads/TangoTest-with-submodules-${{ version }}.tar.gz
-  sha256: aea9182f3f8cee3d37c14c36f5f6488df01c34189dbd0e7fda1cfe0b3c3f4194
+  sha256: 13e58acd0800a44d7b3dbf14acae914f84b9d71bbaf07723671776115d756f40
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
     - cmake
+    - ninja
     - ${{ stdlib('c') }}
     - ${{ compiler('cxx') }}
     - if: unix
       then:
-        - make
         - pkg-config
   host:
     - cppzmq
